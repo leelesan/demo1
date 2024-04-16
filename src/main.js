@@ -17,8 +17,7 @@ const store = new Vuex.Store({
 
 // 导航守卫
 router.beforeEach((to, from, next) => {
-    console.log(to.path)
-    console.log(store.state.isLogin)
+
     if (!store.state.isLogin&&to.path!='/login') {
         next('/login');
     } else {
